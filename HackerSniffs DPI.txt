@@ -1,0 +1,1 @@
+select protocol, sum(traffic_in) as traffic_in, sum(traffic_out) as traffic_out from traffic group by protocol having traffic_in > traffic_out order by protocol;
